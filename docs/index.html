@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hostel Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hostel.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#">Hostel<span>Manage</span></a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#staff">Staff</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary" href="#contact">Contact</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span id="themeIcon" aria-hidden="true">🌙</span>
+          <span class="toggle-text" style="font-weight:600;">Theme</span>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Manage Your Hostel Seamlessly</h1>
+        <p>Allot rooms, track occupancy, assign staff, and manage student records in one clean, unified interface.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#features">Explore Features</a>
+          <a class="btn btn-ghost" href="#rooms">View Rooms</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="card shadow">
+          <div class="card-row">
+            <div>
+              <div class="stat">4</div>
+              <div class="stat-label">Blocks</div>
+            </div>
+            <div>
+              <div class="stat">1200+</div>
+              <div class="stat-label">Students</div>
+            </div>
+            <div>
+              <div class="stat">98%</div>
+              <div class="stat-label">Occupancy</div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="legend">
+            <span class="dot dot-green"></span> Available
+            <span class="dot dot-amber"></span> Reserved
+            <span class="dot dot-red"></span> Occupied
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-title">Powerful Features</h2>
+      <p class="section-sub">Everything you need to run hostel operations efficiently.</p>
+      <div class="grid features-grid">
+        <div class="feature card shadow">
+          <div class="icon">🏠</div>
+          <h3>Room Allotment</h3>
+          <p>One-click allotment with batch, block, and capacity constraints enforced automatically.</p>
+        </div>
+        <div class="feature card shadow">
+          <div class="icon">👨‍🎓</div>
+          <h3>Student Records</h3>
+          <p>Maintain comprehensive student profiles with history, dues, and room changes.</p>
+        </div>
+        <div class="feature card shadow">
+          <div class="icon">🧹</div>
+          <h3>Cleaning Schedule</h3>
+          <p>Assign staff, rotate duties, and track status across blocks and floors.</p>
+        </div>
+        <div class="feature card shadow">
+          <div class="icon">🔐</div>
+          <h3>Secure Access</h3>
+          <p>JWT-based authentication and role-based authorization for admins and staff.</p>
+        </div>
+        <div class="feature card shadow">
+          <div class="icon">📊</div>
+          <h3>Analytics</h3>
+          <p>Monitor occupancy trends, availability, and staff performance with real-time metrics.</p>
+        </div>
+        <div class="feature card shadow">
+          <div class="icon">🧾</div>
+          <h3>Requests & Complaints</h3>
+          <p>Track and resolve maintenance requests and complaints with SLA alerts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rooms" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Rooms Overview</h2>
+      <p class="section-sub">Quick glance at capacity and availability by block.</p>
+      <div class="grid rooms-grid">
+        <div class="room card">
+          <div class="room-head">
+            <h3>Block A</h3>
+            <span class="badge">B.Tech</span>
+          </div>
+          <div class="room-body">
+            <div class="progress">
+              <div class="bar bar-red" style="width: 85%"></div>
+            </div>
+            <div class="muted">Occupied: 170 / 200</div>
+          </div>
+        </div>
+        <div class="room card">
+          <div class="room-head">
+            <h3>Block B</h3>
+            <span class="badge">M.Tech</span>
+          </div>
+          <div class="room-body">
+            <div class="progress">
+              <div class="bar bar-amber" style="width: 60%"></div>
+            </div>
+            <div class="muted">Occupied: 120 / 200</div>
+          </div>
+        </div>
+        <div class="room card">
+          <div class="room-head">
+            <h3>Block C</h3>
+            <span class="badge">PhD</span>
+          </div>
+          <div class="room-body">
+            <div class="progress">
+              <div class="bar bar-green" style="width: 35%"></div>
+            </div>
+            <div class="muted">Occupied: 70 / 200</div>
+          </div>
+        </div>
+        <div class="room card">
+          <div class="room-head">
+            <h3>Block D</h3>
+            <span class="badge">Mixed</span>
+          </div>
+          <div class="room-body">
+            <div class="progress">
+              <div class="bar bar-amber" style="width: 55%"></div>
+            </div>
+            <div class="muted">Occupied: 110 / 200</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="staff" class="section">
+    <div class="container">
+      <h2 class="section-title">Staff Assignments</h2>
+      <p class="section-sub">Roles, shifts, and responsibilities at a glance.</p>
+      <div class="grid staff-grid">
+        <div class="card staff">
+          <div class="avatar">AM</div>
+          <div class="staff-meta">
+            <h3>Aman Mishra</h3>
+            <div class="muted">Warden · Block A</div>
+          </div>
+          <span class="chip">Morning</span>
+        </div>
+        <div class="card staff">
+          <div class="avatar">AV</div>
+          <div class="staff-meta">
+            <h3>Avdhesh Verma</h3>
+            <div class="muted">Supervisor · Block B</div>
+          </div>
+          <span class="chip">Evening</span>
+        </div>
+        <div class="card staff">
+          <div class="avatar">AN</div>
+          <div class="staff-meta">
+            <h3>Anshuman Negi</h3>
+            <div class="muted">Cleaning Lead · Block C</div>
+          </div>
+          <span class="chip">Night</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq">
+        <details>
+          <summary>How do I allot a room to a new student?</summary>
+          <p>Navigate to Allotment, select block and room type, then confirm. Constraints are automatically checked.</p>
+        </details>
+        <details>
+          <summary>Can I import student data?</summary>
+          <p>Yes. Upload CSV in Students › Import. A preview helps you validate fields before saving.</p>
+        </details>
+        <details>
+          <summary>How are staff shifts managed?</summary>
+          <p>Use Staff › Shifts to assign roles per block with weekly rotation templates.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <form class="card contact-form" onsubmit="event.preventDefault(); alert('Thanks! We will reach out.');">
+        <div class="grid form-grid">
+          <label>
+            <span>Name</span>
+            <input type="text" placeholder="Jane Doe" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" placeholder="you@example.com" required>
+          </label>
+          <label class="full">
+            <span>Message</span>
+            <textarea rows="4" placeholder="How can we help?" required></textarea>
+          </label>
+        </div>
+        <button class="btn btn-primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  
+
+  <section id="import" class="section">
+    <div class="container">
+      <h2 class="section-title">Import Hostelite Data (Excel/CSV)</h2>
+      <p class="section-sub">Upload your Excel file. We will parse and show a preview before importing into Firestore.</p>
+
+      <div class="card shadow">
+        <div style="display:grid; gap:10px; align-items:center;">
+          <label>
+            <span class="muted">Select file (.xlsx, .xls, .csv)</span>
+            <input id="xlsInput" type="file" accept=".xlsx,.xls,.csv" />
+          </label>
+          <div class="muted">Expected columns: S.No, Name, Joining Date, Room No, Room Space, Security, Monthly Rent, Rent Date Paid, Form Fill Charges, Educational Institute, Contact #, Floor, Any Information</div>
+          <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+            <button id="btnConvert" class="btn btn-primary" type="button">Convert (Python)</button>
+            <button id="btnParse" class="btn btn-ghost" type="button">Parse & Preview</button>
+            
+            <button id="btnSeeExcel" class="btn btn-ghost" type="button">See data from Excel file</button>
+            <label style="display:flex; gap:8px; align-items:center;">
+              <span class="muted">JSON</span>
+              <input id="jsonInput" type="file" accept=".json" />
+            </label>
+            <button id="btnLoadJson" class="btn btn-ghost" type="button">Load JSON</button>
+            <label style="margin-left:auto; display:flex; gap:8px; align-items:center;">
+              <span class="muted">Sheet</span>
+              <select id="sheetSelect" style="background: var(--surface-2); color: var(--text); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: 8px;">
+                <option value="">Auto</option>
+              </select>
+            </label>
+          </div>
+          <div id="importMsg" class="muted"></div>
+          <div style="overflow:auto; max-height:360px; border:1px solid rgba(255,255,255,.06); border-radius:10px;">
+            <table id="previewTable" style="width:100%; border-collapse:collapse; font-size:13px;">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hostelites" class="section">
+    <div class="container">
+      <h2 class="section-title">Hostelites</h2>
+      <p class="section-sub">Search and filter students. Data is loaded from Firestore.</p>
+
+      <div class="card shadow" style="margin-bottom:14px;">
+        <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 10px;">
+          <label>
+            <span>Name</span>
+            <input id="fltName" type="text" placeholder="e.g. Abdullah">
+          </label>
+          <label>
+            <span>Room No</span>
+            <input id="fltRoom" type="text" placeholder="e.g. 12">
+          </label>
+          <label>
+            <span>Floor</span>
+            <input id="fltFloor" type="text" placeholder="Ground Floor">
+          </label>
+          <div style="display:flex; align-items:flex-end; gap:8px;">
+            <button id="btnSearch" class="btn btn-primary" type="button">Search</button>
+            <button id="btnReset" class="btn btn-ghost" type="button">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow" style="overflow:auto;">
+        <table id="hostelitesTable" style="width:100%; border-collapse:collapse; font-size:13px;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.08)">Name</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.08)">Joining Date</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.08)">Room No</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.08)">Floor</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.08)">Monthly Rent</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.08)">Contact</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.08)">Info</th>
+              <th style="text-align:left; padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.08)">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:10px;">
+          <div id="listMsg" class="muted"></div>
+          <button id="btnLoadMore" class="btn btn-ghost" type="button">Load More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal">
+      <header>
+        <h3 id="modalTitle">View Hostelite</h3>
+        <button id="modalClose" class="icon-btn" aria-label="Close">✕</button>
+      </header>
+      <div class="modal-body">
+        <form id="editForm" class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 10px;">
+          <label>
+            <span>Name</span>
+            <input id="ed_name" type="text" />
+          </label>
+          <label>
+            <span>Room No</span>
+            <input id="ed_roomNo" type="text" />
+          </label>
+          <label>
+            <span>Floor</span>
+            <input id="ed_floor" type="text" />
+          </label>
+          <label>
+            <span>Monthly Rent</span>
+            <input id="ed_monthlyRent" type="number" />
+          </label>
+          <label class="full" style="grid-column: 1 / -1;">
+            <span>Info</span>
+            <textarea id="ed_info" rows="3"></textarea>
+          </label>
+        </form>
+      </div>
+      <div class="modal-actions">
+        <button id="btnDelete" class="btn btn-ghost" type="button">Delete</button>
+        <button id="btnSave" class="btn btn-primary" type="button">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> HostelManage. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#staff">Staff</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+
+    // Theme: load user preference or system preference
+    (function initTheme() {
+      const stored = localStorage.getItem('theme');
+      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      const theme = stored || (prefersLight ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+      const icon = document.getElementById('themeIcon');
+      if (icon) icon.textContent = theme === 'light' ? '☀️' : '🌙';
+    })();
+
+    // Theme toggle handler
+    const themeBtn = document.getElementById('themeToggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        const icon = document.getElementById('themeIcon');
+        if (icon) icon.textContent = next === 'light' ? '☀️' : '🌙';
+      });
+    }
+  </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAnELjjufAwR0o8KoDSJzzWUTK_WSh1NJk",
+      authDomain: "hosteldata-dc0c1.firebaseapp.com",
+      projectId: "hosteldata-dc0c1",
+      storageBucket: "hosteldata-dc0c1.firebasestorage.app",
+      messagingSenderId: "1076910975837",
+      appId: "1:1076910975837:web:1c589c27fe2a6de6cb56b4",
+      measurementId: "G-DHC46E9TGG"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    // --- Demo wiring: Auth + Firestore ---
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, limit, startAfter } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+    // SheetJS for Excel parsing
+    import * as XLSX from "https://cdn.jsdelivr.net/npm/xlsx@0.18.5/+esm";
+
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    const FETCH_ONLY = true; // fetch/display only; disable writes
+    const PY_CONVERT_URL = 'http://127.0.0.1:5001/convert'; // local Python converter
+    const PREFER_PY_CONVERTER = true; // try Python first, then fallback to SheetJS
+
+    const loginForm = document.getElementById('loginForm');
+    const loginMsg = document.getElementById('loginMsg');
+    if (loginForm) {
+      loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('loginEmail').value;
+        const pass = document.getElementById('loginPass').value;
+        try {
+          await signInWithEmailAndPassword(auth, email, pass);
+          loginMsg.textContent = 'Signed in successfully';
+        } catch (err) {
+          loginMsg.textContent = 'Error: ' + (err?.message || err);
+        }
+      });
+    }
+
+    // Removed addHostelite form (uploading disabled)
+
+    const btnLoadRooms = document.getElementById('btnLoadRooms');
+    const roomsList = document.getElementById('roomsList');
+    if (btnLoadRooms) {
+      btnLoadRooms.addEventListener('click', async () => {
+        roomsList.textContent = 'Loading...';
+        try {
+          const snap = await getDocs(collection(db, 'rooms'));
+          const rooms = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+          if (!rooms.length) {
+            roomsList.textContent = 'No rooms found.';
+            return;
+          }
+          roomsList.innerHTML = rooms.map(r => {
+            const available = (r.capacity || 0) - (r.occupied || 0);
+            return `<div>${r.block || ''} ${r.roomNo || ''} — capacity ${r.capacity || 0}, occupied ${r.occupied || 0}, available ${available}</div>`
+          }).join('');
+        } catch (err) {
+          roomsList.textContent = 'Error: ' + (err?.message || err);
+        }
+      });
+    }
+
+    // --- Import Excel/CSV ---
+    const xlsInput = document.getElementById('xlsInput');
+    const btnParse = document.getElementById('btnParse');
+    const btnImport = document.getElementById('btnImport');
+    const btnConvert = document.getElementById('btnConvert');
+    const sheetSelect = document.getElementById('sheetSelect');
+    let parsedRows = [];
+    const jsonInput = document.getElementById('jsonInput');
+    const btnLoadJson = document.getElementById('btnLoadJson');
+    // Hide JSON controls per requirement
+    if (jsonInput) jsonInput.closest('label').style.display = 'none';
+    if (btnLoadJson) btnLoadJson.style.display = 'none';
+ 
+    // Helpers for parsing Excel with messy headers
+    // We compare using normalized lower-case keys without punctuation/extra spaces
+    const EXPECTED_HEADERS = [
+      'sno','s no','s_number','serial','name','full name','student name',
+      'joining date','joining dte','joining','date','room no','room no','room number','room',
+      'room space','space','bed','seat','security','securty','security amount',
+      'monthly rent','rent','per month','rent amount','rent date paid','rent paid on','paid date',
+      'form fill charges','fom fill charges','form charges','form fee',
+      'educational institute','educational institute','institute','university',
+      'contact #','contact#','phone','mobile','contact',
+      'floor','ground floor','first floor','second floor',
+      'any information','information','notes','remarks','comment'
+    ].map(s => s.replace(/\./g,'').toLowerCase());
+
+    function normalizeHeader(h) {
+      return String(h || '')
+        .replace(/\uFEFF/g, '')
+        .replace(/\./g, '')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .toLowerCase();
+    }
+
+    function scoreHeaderRow(cells) {
+      let score = 0;
+      const set = new Set(cells.map(normalizeHeader));
+      for (const hdr of EXPECTED_HEADERS) {
+        if (set.has(hdr)) score++;
+      }
+      return score;
+    }
+
+    function excelDateToISO(n) {
+      const num = Number(n);
+      if (!isFinite(num) || num <= 0) return String(n || '');
+      // Excel serial date (1900 date system)
+      const ms = Math.round((num - 25569) * 86400 * 1000);
+      const d = new Date(ms);
+      if (isNaN(d.getTime())) return String(n || '');
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const dd = String(d.getDate()).padStart(2, '0');
+      return `${yyyy}-${mm}-${dd}`;
+    }
+
+    function mapRowToHostelite(r) {
+      const rLow = Object.keys(r || {}).reduce((acc, k) => { acc[k.toLowerCase()] = r[k]; return acc; }, {});
+      const pick = (...keys) => {
+        for (const k of keys) {
+          if (r[k] !== undefined && r[k] !== null && String(r[k]).trim() !== '') return r[k];
+          const lk = String(k).toLowerCase();
+          if (rLow[lk] !== undefined && rLow[lk] !== null && String(rLow[lk]).trim() !== '') return rLow[lk];
+        }
+        return '';
+      };
+      const toNumber = (v) => {
+        if (v === null || v === undefined || v === '') return 0;
+        const n = Number(String(v).replace(/[,\s]/g, ''));
+        return isNaN(n) ? 0 : n;
+      };
+      const maybeDate = (v) => {
+        if (typeof v === 'number') return excelDateToISO(v);
+        const s = String(v || '').trim();
+        if (/^\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}$/.test(s)) {
+          const [a,b,c] = s.split(/[\/\-]/);
+          const yyyy = c.length === 2 ? `20${c}` : c;
+          const mm = String(a.length === 4 ? b : a).padStart(2,'0');
+          const dd = String(a.length === 4 ? c : b).padStart(2,'0');
+          const y = a.length === 4 ? a : yyyy;
+          return `${y}-${mm}-${dd}`;
+        }
+        return s;
+      };
+      // Prefer the exact headers provided by you first
+      return {
+        name: String(pick('Name','Full Name','Student Name','name')).trim(),
+        joiningDate: maybeDate(pick('Joining Dte','Joining Date','Joining','Date')),
+        roomNo: String(pick('Room No.','Room No','Room Number','Room','roomNo')).trim(),
+        roomSpace: String(pick('Room Space','Space','Bed','Seat','roomSpace')).trim(),
+        security: toNumber(pick('Securty','Security','Security Amount')),
+        monthlyRent: toNumber(pick('Monthly Rent ','Monthly Rent','Rent','Per Month','Rent Amount')),
+        rentDatePaid: maybeDate(pick('Rent Date Paid','Rent Paid On','Rent Date','Paid Date')),
+        formFillCharges: toNumber(pick('Fom fill Charges','Form Fill Charges','Form Charges','Form Fee')),
+        institute: String(pick('Educational institute','Educational Institute','Institute','University')).trim(),
+        contact: String(pick('Contact#','Contact #','Phone','Mobile','Contact')).trim(),
+        floor: String(pick('FLOOR','Floor','floor','Ground Floor','First Floor','Second Floor')).trim(),
+        info: String(pick('Any Information','Information','Notes','Remarks','Comment')).trim()
+      };
+    }
+
+    async function parseSelectedFile() {
+      importMsg.textContent = '';
+      parsedRows = [];
+      clearPreview();
+      const file = xlsInput?.files?.[0];
+      if (!file) { importMsg.textContent = 'Please select a file.'; return false; }
+      try {
+        // 1) Try Python converter if enabled
+        if (PREFER_PY_CONVERTER && PY_CONVERT_URL) {
+          try {
+            const fd = new FormData();
+            fd.append('file', file);
+            const resp = await fetch(PY_CONVERT_URL, { method: 'POST', body: fd });
+            if (resp.ok) {
+              const pyJson = await resp.json();
+              if (Array.isArray(pyJson) && pyJson.length) {
+                parsedRows = pyJson.map(r => ({
+                  name: String(r.name || '').trim(),
+                  joiningDate: String(r.joiningDate || '').trim(),
+                  roomNo: String(r.roomNo || '').trim(),
+                  roomSpace: String(r.roomSpace || '').trim(),
+                  security: Number(r.security || 0),
+                  monthlyRent: Number(r.monthlyRent || 0),
+                  rentDatePaid: String(r.rentDatePaid || '').trim(),
+                  formFillCharges: Number(r.formFillCharges || 0),
+                  institute: String(r.institute || '').trim(),
+                  contact: String(r.contact || '').trim(),
+                  floor: String(r.floor || '').trim(),
+                  info: String(r.info || '').trim()
+                }));
+                renderPreview(parsedRows);
+                if (btnImport) btnImport.disabled = parsedRows.length === 0;
+                importMsg.textContent = `Loaded ${parsedRows.length} rows via Python converter`;
+                return true;
+              }
+            }
+          } catch (e) {
+            // ignore and fallback
+          }
+        }
+
+        // 2) Fallback to client-side SheetJS parsing
+        const data = await file.arrayBuffer();
+        const wb = XLSX.read(data, { type: 'array' });
+        // populate sheet selector
+        const sheetSelect = document.getElementById('sheetSelect');
+        if (sheetSelect) {
+          sheetSelect.innerHTML = '<option value="">Auto</option>' + wb.SheetNames.map(n => `<option value="${n}">${n}</option>`).join('');
+        }
+        // choose best sheet automatically when Auto
+        let chosen = (sheetSelect && sheetSelect.value) ? sheetSelect.value : '';
+        if (!chosen) {
+          let bestSheet = '';
+          let bestScore = -1;
+          for (const name of wb.SheetNames) {
+            const wsProbe = wb.Sheets[name];
+            const top = XLSX.utils.sheet_to_json(wsProbe, { header: 1, defval: '' }).slice(0, 10);
+            let localBest = 0;
+            top.forEach(r => {
+              const s = scoreHeaderRow(Array.isArray(r) ? r : []);
+              if (s > localBest) localBest = s;
+            });
+            if (localBest > bestScore) { bestScore = localBest; bestSheet = name; }
+          }
+          chosen = bestSheet || (wb.SheetNames[0] || '');
+        }
+        const ws = wb.Sheets[chosen];
+
+        // First attempt: normal keyed JSON by header row
+        let json = XLSX.utils.sheet_to_json(ws, { defval: '' });
+        // If nothing meaningful, try header:1 mode and auto-detect header row
+        if (!json.length || Object.keys(json[0]).length <= 2) {
+          const rows = XLSX.utils.sheet_to_json(ws, { header: 1, defval: '' });
+          // find the best header row by scoring against expected headers
+          let headerIndex = -1, bestScore = -1;
+          rows.forEach((r, idx) => {
+            const score = scoreHeaderRow(Array.isArray(r) ? r : []);
+            if (score > bestScore) { bestScore = score; headerIndex = idx; }
+          });
+          if (headerIndex >= 0) {
+            const rawHeader = (rows[headerIndex] || []);
+            const header = rawHeader.map(normalizeHeader);
+            const dataRows = rows.slice(headerIndex + 1).filter(r => Array.isArray(r));
+            json = dataRows.map(arr => {
+              const obj = {};
+              header.forEach((h, i) => { if (h) obj[h] = arr[i]; });
+              return obj;
+            });
+          }
+        }
+
+        // Map to our schema and filter valid (accept if either name or room no present)
+        parsedRows = json.map(mapRowToHostelite).filter(r => (r.name && r.name.trim()) || (r.roomNo && r.roomNo.trim()));
+        renderPreview(parsedRows);
+        if (btnImport) btnImport.disabled = parsedRows.length === 0;
+        const sampleHeaders = json.length ? Object.keys(json[0]).slice(0,10).join(', ') : 'none';
+        importMsg.textContent = parsedRows.length ? `Parsed ${parsedRows.length} rows from sheet: ${chosen || 'Auto'}. Headers: ${sampleHeaders}` : `No valid rows found. Tips: 1) Ensure a header row exists (e.g., Name, Room No, Monthly Rent). 2) Switch sheet from the dropdown or keep Auto. 3) Remove merged/blank header rows.`;
+        return parsedRows.length > 0;
+      } catch (err) {
+        importMsg.textContent = 'Parse error: ' + (err?.message || err);
+        return false;
+      }
+    }
+
+    function clearPreview() {
+      previewTable.tHead.innerHTML = '';
+      previewTable.tBodies[0].innerHTML = '';
+    }
+
+    function renderPreview(rows) {
+      clearPreview();
+      if (!rows.length) return;
+      const headers = Object.keys(rows[0]);
+      const thead = previewTable.createTHead();
+      const hr = thead.insertRow();
+      headers.forEach(h => {
+        const th = document.createElement('th');
+        th.textContent = h;
+        th.style.textAlign = 'left';
+        th.style.padding = '8px 10px';
+        th.style.borderBottom = '1px solid rgba(255,255,255,.08)';
+        thead.appendChild(hr);
+        hr.appendChild(th);
+      });
+      const tb = previewTable.tBodies[0];
+      rows.slice(0, 100).forEach(r => {
+        const tr = tb.insertRow();
+        headers.forEach(h => {
+          const td = tr.insertCell();
+          td.textContent = r[h] ?? '';
+          td.style.padding = '8px 10px';
+          td.style.borderBottom = '1px solid rgba(255,255,255,.04)';
+        });
+      });
+    }
+
+    if (btnParse) {
+      btnParse.addEventListener('click', async () => {
+        await parseSelectedFile();
+      });
+    }
+
+    if (btnConvert) {
+      btnConvert.addEventListener('click', async () => {
+        if (!xlsInput?.files?.[0]) { importMsg.textContent = 'Please select an Excel file first.'; return; }
+        const ok = await parseSelectedFile();
+        if (ok && Array.isArray(parsedRows) && parsedRows.length) {
+          const rows = parsedRows.map(r => ({
+            name: r.name,
+            joiningDate: r.joiningDate,
+            roomNo: r.roomNo,
+            floor: r.floor,
+            monthlyRent: r.monthlyRent,
+            contact: r.contact,
+            info: r.info
+          }));
+          dataSource = 'excel';
+          excelRows = rows;
+          renderRows(rows, false);
+          listMsg.textContent = `Showing ${rows.length} rows (converted)`;
+          btnLoadMore.disabled = true;
+        }
+      });
+    }
+
+    // Removed Firestore import UI and logic
+
+    const btnSeeExcel = document.getElementById('btnSeeExcel');
+    if (btnSeeExcel) {
+      btnSeeExcel.addEventListener('click', async () => {
+        if (!parsedRows.length) {
+          const ok = await parseSelectedFile();
+          if (!ok) return;
+        }
+        const rows = parsedRows.map(r => ({
+          name: r.name,
+          joiningDate: r.joiningDate,
+          roomNo: r.roomNo,
+          floor: r.floor,
+          monthlyRent: r.monthlyRent,
+          contact: r.contact,
+          info: r.info
+        }));
+        dataSource = 'excel';
+        excelRows = rows;
+        renderRows(rows, false);
+        listMsg.textContent = `Showing ${rows.length} rows from Excel`;
+        btnLoadMore.disabled = true;
+      });
+    }
+
+    if (btnLoadJson && jsonInput) {
+      btnLoadJson.addEventListener('click', async () => {
+        const file = jsonInput.files && jsonInput.files[0];
+        if (!file) { importMsg.textContent = 'Please select a JSON file.'; return; }
+        try {
+          const text = await file.text();
+          const raw = JSON.parse(text);
+          const rows = Array.isArray(raw) ? raw : (raw.data || []);
+          excelRows = rows.map(r => ({
+            name: r.name || r.Name || '',
+            joiningDate: r.joiningDate || r['Joining Date'] || r['Date'] || '',
+            roomNo: r.roomNo || r['Room No'] || r['Room Number'] || '',
+            floor: r.floor || r['Floor'] || '',
+            monthlyRent: r.monthlyRent || r['Monthly Rent'] || r['Rent'] || '',
+            contact: r.contact || r['Contact'] || r['Contact #'] || '',
+            info: r.info || r['Any Information'] || r['Information'] || ''
+          }));
+          dataSource = 'excel';
+          renderRows(excelRows, false);
+          listMsg.textContent = `Loaded ${excelRows.length} rows from JSON`;
+          btnLoadMore.disabled = true;
+        } catch (e) {
+          importMsg.textContent = 'JSON parse error: ' + (e?.message || e);
+        }
+      });
+    }
+
+    if (xlsInput) {
+      xlsInput.addEventListener('change', () => {
+        // Clear any previous state when a new file is chosen
+        parsedRows = [];
+        if (btnImport) btnImport.disabled = true;
+        importMsg.textContent = '';
+        clearPreview();
+      });
+    }
+
+    const sheetSelectEl = document.getElementById('sheetSelect');
+    if (sheetSelectEl) {
+      sheetSelectEl.addEventListener('change', async () => {
+        // Re-parse when sheet changes if a file is loaded
+        if (xlsInput?.files?.[0]) {
+          await parseSelectedFile();
+        }
+      });
+    }
+
+    // --- Hostelites list ---
+    const table = document.getElementById('hostelitesTable');
+    const listMsg = document.getElementById('listMsg');
+    const btnSearch = document.getElementById('btnSearch');
+    const btnReset = document.getElementById('btnReset');
+    const btnLoadMore = document.getElementById('btnLoadMore');
+    const fltName = document.getElementById('fltName');
+    const fltRoom = document.getElementById('fltRoom');
+    const fltFloor = document.getElementById('fltFloor');
+
+    let lastDoc = null;
+    let activeFilters = {};
+    let dataSource = 'firestore';
+    let excelRows = [];
+
+    let currentEditId = null;
+
+    function renderRows(rows, append = false) {
+      const tbody = table.tBodies[0];
+      if (!append) tbody.innerHTML = '';
+      rows.forEach(r => {
+        const tr = document.createElement('tr');
+        tr.dataset.expanded = 'false';
+        const cells = [
+          r.name || '',
+          r.joiningDate || '',
+          r.roomNo || '',
+          r.floor || '',
+          typeof r.monthlyRent === 'number' ? r.monthlyRent : (r.monthlyRent || ''),
+          r.contact || '',
+          r.info || ''
+        ];
+        cells.forEach(val => {
+          const td = document.createElement('td');
+          td.textContent = val;
+          td.style.padding = '8px 10px';
+          td.style.borderBottom = '1px solid rgba(255,255,255,.04)';
+          tr.appendChild(td);
+        });
+        // Actions cell
+        const actionsTd = document.createElement('td');
+        actionsTd.style.padding = '8px 10px';
+        actionsTd.style.borderBottom = '1px solid rgba(255,255,255,.04)';
+        const viewBtn = document.createElement('button');
+        viewBtn.className = 'icon-btn';
+        viewBtn.type = 'button';
+        viewBtn.textContent = 'View';
+        const editBtn = document.createElement('button');
+        editBtn.className = 'icon-btn';
+        editBtn.type = 'button';
+        editBtn.textContent = 'Edit';
+        const delBtn = document.createElement('button');
+        delBtn.className = 'icon-btn';
+        delBtn.type = 'button';
+        delBtn.textContent = 'Delete';
+        actionsTd.append(viewBtn, editBtn, delBtn);
+        tr.appendChild(actionsTd);
+
+        // Click to expand
+        tr.addEventListener('click', (e) => {
+          // avoid triggering when clicking buttons
+          if ((e.target instanceof Element) && e.target.closest('button')) return;
+          toggleExpandRow(tr, r);
+        });
+
+        // Button handlers
+        viewBtn.addEventListener('click', () => openModal('View Hostelite', r));
+        if (typeof FETCH_ONLY !== 'undefined' && FETCH_ONLY || !r.id) {
+          editBtn.style.display = 'none';
+          delBtn.style.display = 'none';
+        } else {
+          editBtn.addEventListener('click', () => openModal('Edit Hostelite', r, true));
+          delBtn.addEventListener('click', async () => {
+            if (!confirm('Delete this record?')) return;
+            try {
+              // Attempt to delete by composite fields if id not present
+              const key = (r.id) ? r.id : null;
+              if (key) {
+                const { doc, deleteDoc } = await import('https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js');
+                await deleteDoc(doc(db, 'hostelites', key));
+              } else {
+                alert('Cannot delete: record id missing.');
+                return;
+              }
+              listMsg.textContent = 'Deleted';
+              lastDoc = null;
+              await fetchHostelites({ append: false });
+            } catch (err) {
+              alert('Delete failed: ' + (err?.message || err));
+            }
+          });
+        }
+        tbody.appendChild(tr);
+      });
+    }
+
+    function buildExpandRow(data) {
+      const tr = document.createElement('tr');
+      tr.className = 'row-expand';
+      const td = document.createElement('td');
+      td.colSpan = 7;
+      const div = document.createElement('div');
+      div.className = 'expand-card';
+      div.innerHTML = `
+        <div class="expand-grid">
+          <div class="expand-item"><span class="label">Name</span>${data.name || ''}</div>
+          <div class="expand-item"><span class="label">Joining Date</span>${data.joiningDate || ''}</div>
+          <div class="expand-item"><span class="label">Room No</span>${data.roomNo || ''}</div>
+          <div class="expand-item"><span class="label">Floor</span>${data.floor || ''}</div>
+          <div class="expand-item"><span class="label">Room Space</span>${data.roomSpace || ''}</div>
+          <div class="expand-item"><span class="label">Monthly Rent</span>${data.monthlyRent ?? ''}</div>
+          <div class="expand-item"><span class="label">Security</span>${data.security ?? ''}</div>
+          <div class="expand-item"><span class="label">Rent Date Paid</span>${data.rentDatePaid || ''}</div>
+          <div class="expand-item"><span class="label">Institute</span>${data.institute || ''}</div>
+          <div class="expand-item"><span class="label">Contact</span>${data.contact || ''}</div>
+          <div class="expand-item" style="grid-column: 1 / -1;"><span class="label">Info</span>${data.info || ''}</div>
+        </div>
+      `;
+      td.appendChild(div);
+      tr.appendChild(td);
+      return tr;
+    }
+
+    function toggleExpandRow(tr, data) {
+      const tbody = table.tBodies[0];
+      // Collapse any other expanded rows
+      const open = tbody.querySelector('tr.row-expand');
+      if (open) {
+        const prev = open.previousElementSibling;
+        if (prev) prev.dataset.expanded = 'false';
+        open.remove();
+      }
+      if (tr.dataset.expanded === 'true') {
+        tr.dataset.expanded = 'false';
+        return;
+      }
+      tr.dataset.expanded = 'true';
+      const exp = buildExpandRow(data);
+      tr.after(exp);
+    }
+
+    // Modal logic
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const modalClose = document.getElementById('modalClose');
+    const modalTitle = document.getElementById('modalTitle');
+    const ed_name = document.getElementById('ed_name');
+    const ed_roomNo = document.getElementById('ed_roomNo');
+    const ed_floor = document.getElementById('ed_floor');
+    const ed_monthlyRent = document.getElementById('ed_monthlyRent');
+    const ed_info = document.getElementById('ed_info');
+    const btnSave = document.getElementById('btnSave');
+    const btnDelete = document.getElementById('btnDelete');
+
+    function openModal(title, data, editable = false) {
+      modalTitle.textContent = title;
+      currentEditId = data.id || null;
+      ed_name.value = data.name || '';
+      ed_roomNo.value = data.roomNo || '';
+      ed_floor.value = data.floor || '';
+      ed_monthlyRent.value = (typeof data.monthlyRent === 'number') ? data.monthlyRent : (data.monthlyRent || '');
+      ed_info.value = data.info || '';
+      // toggle readonly
+      [ed_name, ed_roomNo, ed_floor, ed_monthlyRent, ed_info].forEach(el => el.disabled = !editable);
+      btnSave.style.display = editable ? 'inline-block' : 'none';
+      btnDelete.style.display = editable ? 'inline-block' : 'none';
+      modalBackdrop.classList.add('open');
+      modalBackdrop.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeModal() {
+      modalBackdrop.classList.remove('open');
+      modalBackdrop.setAttribute('aria-hidden', 'true');
+    }
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modalBackdrop) modalBackdrop.addEventListener('click', (e) => { if (e.target === modalBackdrop) closeModal(); });
+
+    if (btnSave) {
+      btnSave.addEventListener('click', async () => {
+        if (!currentEditId) { alert('Record id missing'); return; }
+        try {
+          const { doc, updateDoc } = await import('https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js');
+          await updateDoc(doc(db, 'hostelites', currentEditId), {
+            name: ed_name.value.trim(),
+            roomNo: ed_roomNo.value.trim(),
+            floor: ed_floor.value.trim(),
+            monthlyRent: Number(ed_monthlyRent.value || 0),
+            info: ed_info.value.trim()
+          });
+          closeModal();
+          listMsg.textContent = 'Saved';
+          lastDoc = null;
+          await fetchHostelites({ append: false });
+        } catch (err) {
+          alert('Save failed: ' + (err?.message || err));
+        }
+      });
+    }
+
+    async function fetchHostelites({ append = false } = {}) {
+      listMsg.textContent = 'Loading...';
+      const constraints = [orderBy('name'), limit(25)];
+      const f = activeFilters;
+      if (f.name) {
+        constraints.push(where('name', '>=', f.name));
+        constraints.push(where('name', '<=', f.name + '\uf8ff'));
+      }
+      if (f.roomNo) constraints.push(where('roomNo', '==', f.roomNo));
+      if (f.floor) constraints.push(where('floor', '==', f.floor));
+      if (lastDoc) constraints.push(startAfter(lastDoc));
+      const q = query(collection(db, 'hostelites'), ...constraints);
+      const snap = await getDocs(q);
+      const rows = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      lastDoc = snap.docs[snap.docs.length - 1] || null;
+      renderRows(rows, append);
+      listMsg.textContent = rows.length ? `Loaded ${rows.length}${append ? ' more' : ''}` : 'No results';
+      btnLoadMore.disabled = !lastDoc;
+    }
+
+    if (btnSearch) {
+      btnSearch.addEventListener('click', () => {
+        activeFilters = {
+          name: (fltName.value || '').trim(),
+          roomNo: (fltRoom.value || '').trim(),
+          floor: (fltFloor.value || '').trim()
+        };
+        lastDoc = null;
+        fetchHostelites({ append: false });
+      });
+    }
+
+    if (btnReset) {
+      btnReset.addEventListener('click', () => {
+        fltName.value = '';
+        fltRoom.value = '';
+        fltFloor.value = '';
+        activeFilters = {};
+        lastDoc = null;
+        fetchHostelites({ append: false });
+      });
+    }
+
+    if (btnLoadMore) {
+      btnLoadMore.addEventListener('click', () => fetchHostelites({ append: true }));
+    }
+
+    // initial load
+    if (table) fetchHostelites({ append: false });
+  </script>
+</body>
+</html>
